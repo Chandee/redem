@@ -21,6 +21,7 @@ const SelectBox = ({ titulo, subtitulo, texto }) => {
         {abas.map((conteudo, index) => {
           return (
             <div
+              key={index}
               onClick={() => {
                 setSelecionado(index);
               }}
