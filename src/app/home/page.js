@@ -266,13 +266,21 @@ Suspendisse non odio sit amet massa lobortis scelerisque. Integer gravida nulla 
               <Text
                 textType="a"
                 sizes={"C1"}
-                className="text-laranja content-end ml-auto"
+                className="text-laranja content-end ml-auto flex"
               >
-                Ver todos artigos -icone -
+                Ver todos artigos
+                <div className="ml-4">
+                  <Image
+                    src={"/img/voltarIcon.svg"}
+                    height={16}
+                    width={16}
+                    className="h-4 w-4"
+                  />
+                </div>
               </Text>
               {/* pode ser um botao aqui no lugar do a (depois que estiver pronto)*/}
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between gap-8">
               <BoxEspeciais
                 titulo={"Lorem ipsum dolor sit amet sectetur dolor sit"}
                 subtitulo={
