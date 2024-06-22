@@ -1,15 +1,11 @@
-import react, { useState } from "react";
-import Button from "./base/Button";
-import Heading from "./base/Heading";
-import Text from "./base/Text";
+import { useState } from 'react';
+import Button from '@base/Button';
+import Heading from '@base/Heading';
+import Text from '@base/Text';
 
-const SelectBox = ({ titulo, subtitulo, texto }) => {
+const SelectBox = ({ title, subTitle, texto }: { title: string; subTitle: string; texto: string }) => {
   const [selecionado, setSelecionado] = useState(0);
-  const abas = [
-    "Como fazer os cruzamentos",
-    "Como fazer Download dos dados",
-    "Índices e Indicadores",
-  ];
+  const abas = ['Como fazer os cruzamentos', 'Como fazer Download dos dados', 'Índices e Indicadores'];
 
   /* to-do
     refatorar o componente para selecionar
@@ -27,11 +23,11 @@ const SelectBox = ({ titulo, subtitulo, texto }) => {
               }}
               className={`${
                 selecionado === index
-                  ? "bg-laranja text-white text-[18px] font-bold rounded-t-[10px] py-4 px-8"
-                  : "text-laranja text-[18px]  py-4 px-8"
+                  ? 'bg-laranja text-white text-[18px] font-bold rounded-t-[10px] py-4 px-8'
+                  : 'text-laranja text-[18px]  py-4 px-8'
               }`}
             >
-              {conteudo}{" "}
+              {conteudo}{' '}
             </div>
           );
         })}
@@ -39,10 +35,10 @@ const SelectBox = ({ titulo, subtitulo, texto }) => {
       <div className="flex py-10 px-7py-10 px-7 bg-laranja">
         <div className="  text-white">
           <Heading headingLevel={2} className="font-bold pb-3">
-            {titulo}
+            {title}
           </Heading>
-          <Text className=" text-[18px font-bold pb-[20px]">{subtitulo}</Text>
-          <Text sizes={"B2"} className="mt-auto pb-[20px] ">
+          <Text className=" text-[18px font-bold pb-[20px]">{subTitle}</Text>
+          <Text sizes={'B2'} className="mt-auto pb-[20px] ">
             {texto}
           </Text>
           <Button>
